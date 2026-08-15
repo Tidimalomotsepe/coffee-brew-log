@@ -9,6 +9,6 @@ export default defineConfig({
   },
 
   datasource: {
-    url: "file:../dev.db",
+    url: "file:./dev.db",
   },
 });
