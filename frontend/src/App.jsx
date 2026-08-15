@@ -15,7 +15,7 @@ function App() {
   const [rating, setRating] = useState("");
   const [tastingNotes, setTastingNotes] = useState("");
 
-  const API_URL = "http://localhost:5000/api/brews";
+  const API_URL = "https://coffee-brew-log-mxrn.onrender.com/api/brews";
 
   // ============================
   // LOAD BREWS
