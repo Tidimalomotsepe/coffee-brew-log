@@ -1,60 +1,210 @@
-# **XPL Full-stack developer bootcamp assessment**
+# ☕ Coffee Brew Log
 
-# **Introduction**
+A full-stack web application for creating, managing and reviewing coffee brew records.
 
-You’re opening a hipster ☕️micro-roastery and need a tiny app to log each brew you make.
+## Live Demo
 
-# **Your mission**
+**Application:** https://coffee-brew-log-mxrn.onrender.com/
 
-Ship a working full-stack **Coffee Brew Log app** that lets a user:
+**GitHub:** https://github.com/Tidimalomotsepe/coffee-brew-log
 
-* Create a brew entry and save it to the database  
-* Read the brew log in a list view  
-* Filter the list view by brew method  
-* Edit and update a brew entry  
-* Delete a brew entry
+## About the Project
 
-# **Tech stack**
+Coffee Brew Log is a full-stack application developed to allow users to keep track of their coffee brewing records.
 
-You may choose which technology you use, but you must include:
+The application provides a simple interface for recording brew details and managing saved records. It demonstrates full-stack development, REST API integration, database operations, frontend state management, validation, testing and deployment.
 
-* A front-end framework like React, Vue, Svelte or Angular  
-* Any CSS framework  
-* A back-end framework like Node/Express, Rails, Flask, Go, Laravel etc.  
-* An ORM backed by a SQL database like MySQL, PostgreSQL or SQLite  
-* In your git repo, place your backend and frontend in their respective folders
+## Features
 
-# **Technical requirements**
+* Create a new brew record
+* View saved brew records
+* Filter brews by brewing method
+* Edit existing brew records
+* Delete brew records
+* Validate form input
+* Store brew information in a database
+* Communicate between the React frontend and Node.js backend through a REST API
+* Display brew ratings with visual indicators
+* Responsive user interface
 
-### Front-end
+## Technology Stack
 
-* Split your app into sensible components.  
-* Build the UI according to the wireframe images supplied below, but feel free to make your own design decisions if you think of something better.  
-* Make sure that your UI is responsive.  
-* The title of the page should be “Brews: {brewCount}” where brewCount is the number of brews.  
-* Include validation: your brew create and brew edit forms should not allow the form to be submitted if there are blank fields.
+### Frontend
 
-### Back-end
+* React
+* JavaScript
+* Vite
+* HTML
+* CSS
 
-* Your front-end should communicate with your back-end via a JSON API, that exposes CRUD endpoints for /api/brews.  
-* Validate that all fields are supplied before saving a record.  
-* Return the correct HTTP status codes as appropriate.
+### Backend
 
-### Documentation and collaboration
+* Node.js
+* Express.js
+* REST API
 
-* Include a file Documentation.md with setup instructions and a description of the project.  
-* Keep your git history tidy and commit each feature with a descriptive commit message.
+### Database
 
-### Security hygiene
+* SQLite
+* Prisma ORM
 
-* Don’t hardcode any secrets. You must read from ENV vars where relevant, and include a .env.example file for easy setup.
+### Development & Deployment
 
-### Deployment
+* Git
+* GitHub
+* Postman
+* VS Code
+* Render
 
-* Deploy your app using any hosting service you want, and include the URL in a file “[deployment.md](http://deployment.md)” in your repo. If you aren’t sure which host to use, [render.com](http://render.com) has a free tier you can use.  
-* If you struggle with deployment, add some notes to “[deployment.md](http://deployment.md)” including what you tried to troubleshoot and solve it.
+## Application Architecture
 
-# **Wireframes**
+The project is organised into separate frontend and backend applications:
 
-![Wireframe](./wireframe-1.png)
-![Wireframe](./wireframe-2.png)
+```text
+coffee-brew-log/
+├── frontend/
+│   └── React application
+│
+├── backend/
+│   ├── Express server
+│   ├── API routes
+│   ├── Controllers
+│   └── Prisma database configuration
+│
+├── Documentation.md
+├── deployment.md
+└── README.md
+```
+
+## API Endpoints
+
+The backend exposes REST API endpoints for managing brew records.
+
+| Method | Endpoint         | Description             |
+| ------ | ---------------- | ----------------------- |
+| GET    | `/api/brews`     | Retrieve all brews      |
+| POST   | `/api/brews`     | Create a new brew       |
+| PUT    | `/api/brews/:id` | Update an existing brew |
+| DELETE | `/api/brews/:id` | Delete a brew           |
+
+## Example Brew Data
+
+A brew record contains information such as:
+
+* Coffee name
+* Brewing method
+* Coffee dose
+* Water amount
+* Grind size
+* Rating
+* Tasting notes
+
+## Validation & Error Handling
+
+The application includes validation to prevent incomplete brew records from being submitted.
+
+The backend validates incoming data before saving records and returns appropriate HTTP responses for API operations.
+
+During development, frontend, backend, API and database issues were investigated and resolved, including database schema mismatches, API route issues and frontend/backend integration problems.
+
+## Testing
+
+API functionality was tested using **Postman**.
+
+Application functionality was tested during development to verify:
+
+* Creating brew records
+* Retrieving brew records
+* Updating brew records
+* Deleting brew records
+* Filtering brew records
+* Form validation
+* Frontend/backend communication
+
+## Running the Project Locally
+
+### Prerequisites
+
+Make sure you have installed:
+
+* Node.js
+* npm
+* Git
+
+### Clone the repository
+
+```bash
+git clone https://github.com/Tidimalomotsepe/coffee-brew-log.git
+cd coffee-brew-log
+```
+
+### Backend
+
+```bash
+cd backend
+npm install
+```
+
+Configure the required environment variables using the provided `.env.example` file.
+
+Run the Prisma database setup as described in `Documentation.md`.
+
+Start the backend:
+
+```bash
+node server.js
+```
+
+### Frontend
+
+Open a new terminal:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+The frontend can then be accessed through the local development URL displayed by Vite.
+
+## Deployment
+
+The application backend has been deployed using **Render**.
+
+**Live Application:**
+https://coffee-brew-log-mxrn.onrender.com/
+
+Deployment configuration and troubleshooting notes are documented in `deployment.md`.
+
+## Security
+
+Sensitive configuration values are not committed to the repository.
+
+Environment variables are used where appropriate, and an `.env.example` file is provided to assist with local setup.
+
+## What I Learned
+
+Through this project, I gained practical experience with:
+
+* Full-stack web application development
+* React component development
+* Building REST APIs with Node.js and Express
+* Database integration using Prisma and SQLite
+* CRUD operations
+* API testing with Postman
+* Debugging frontend and backend issues
+* Database troubleshooting
+* Git and GitHub version control
+* Application deployment using Render
+* Managing environment configuration
+
+## Author
+
+**Tidimalo Motsepe**
+
+Diploma in Information Technology
+Vaal University of Technology
+
+**GitHub:** https://github.com/Tidimalomotsepe
+
+**Portfolio Project:** Coffee Brew Log
